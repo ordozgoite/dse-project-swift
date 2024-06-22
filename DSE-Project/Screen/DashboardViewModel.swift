@@ -19,15 +19,32 @@ import Foundation
 class DashboardViewModel: ObservableObject {
     
     @Published var attempts: [RecognitionAttempt] = []
+    @Published var isLoading: Bool = false
+    @Published var isOpening: Bool = false
     
     func getAttempts() async {
+        isLoading = true
         let result = await DSEServices.shared.getAllRecognitionAttempts()
+        isLoading = false
         
         switch result {
         case .success(let attempts):
             self.attempts = attempts
         case .failure(let error):
             print("❌ Error trying to fetch attempts: \(error)")
+        }
+    }
+    
+    func openDoor() async {
+        isOpening = true
+        let result = await DSEServices.shared.openDoor()
+        isOpening = false
+        
+        switch result {
+        case .success:
+            print("🚪 Door opened")
+        case .failure(let error):
+            print("❌ Error trying to open door: \(error)")
         }
     }
 }

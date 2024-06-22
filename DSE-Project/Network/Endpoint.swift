@@ -21,7 +21,8 @@ protocol Endpoint {
 extension Endpoint {
     
     var baseUrl: URL {
-        return URL(string: "http://localhost:3000")!
+        return URL(string: "https://dse-project-c1286b1b0443.herokuapp.com")!
+//        return URL(string: "http://localhost:3000")!
     }
 }
 

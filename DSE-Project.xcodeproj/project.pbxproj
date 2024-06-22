@@ -20,6 +20,14 @@
 		ED2EAA892C1BFA7400BF7F24 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2EAA882C1BFA7400BF7F24 /* Endpoint.swift */; };
 		ED2EAA8B2C1BFA9800BF7F24 /* DSEEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2EAA8A2C1BFA9800BF7F24 /* DSEEndpoints.swift */; };
 		ED2EAA8E2C1BFB3F00BF7F24 /* DSEServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2EAA8D2C1BFB3F00BF7F24 /* DSEServices.swift */; };
+		ED2EAA902C22211400BF7F24 /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2EAA8F2C22211400BF7F24 /* TestScreen.swift */; };
+		ED2EAA932C22744E00BF7F24 /* HoldDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2EAA922C22744E00BF7F24 /* HoldDownButton.swift */; };
+		EDC817512C268A01009890FD /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC817502C268A01009890FD /* NotificationManager.swift */; };
+		EDF900652C236995001F5FF9 /* OpenDoorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF900642C236995001F5FF9 /* OpenDoorResponse.swift */; };
+		EDF900672C236D3B001F5FF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF900662C236D3B001F5FF9 /* GoogleService-Info.plist */; };
+		EDF9006A2C236F0A001F5FF9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EDF900692C236F0A001F5FF9 /* FirebaseAnalytics */; };
+		EDF9006C2C236FB8001F5FF9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = EDF9006B2C236FB8001F5FF9 /* FirebaseMessaging */; };
+		EDF9006F2C237060001F5FF9 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF9006E2C237060001F5FF9 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,14 @@
 		ED2EAA882C1BFA7400BF7F24 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		ED2EAA8A2C1BFA9800BF7F24 /* DSEEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSEEndpoints.swift; sourceTree = "<group>"; };
 		ED2EAA8D2C1BFB3F00BF7F24 /* DSEServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSEServices.swift; sourceTree = "<group>"; };
+		ED2EAA8F2C22211400BF7F24 /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		ED2EAA922C22744E00BF7F24 /* HoldDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldDownButton.swift; sourceTree = "<group>"; };
+		EDC8174D2C26881B009890FD /* DSE-Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DSE-Project.entitlements"; sourceTree = "<group>"; };
+		EDC8174E2C26885A009890FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDC817502C268A01009890FD /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		EDF900642C236995001F5FF9 /* OpenDoorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDoorResponse.swift; sourceTree = "<group>"; };
+		EDF900662C236D3B001F5FF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EDF9006E2C237060001F5FF9 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF9006C2C236FB8001F5FF9 /* FirebaseMessaging in Frameworks */,
+				EDF9006A2C236F0A001F5FF9 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +87,10 @@
 		ED233D832C1A4B620057B79D /* DSE-Project */ = {
 			isa = PBXGroup;
 			children = (
+				EDC8174E2C26885A009890FD /* Info.plist */,
+				EDC8174D2C26881B009890FD /* DSE-Project.entitlements */,
+				EDF9006D2C237054001F5FF9 /* Util */,
+				ED2EAA912C22743700BF7F24 /* Components */,
 				ED2EAA852C1BFA2A00BF7F24 /* Network */,
 				ED2EAA822C1BF92400BF7F24 /* Screen */,
 				ED233D992C1A94630057B79D /* Model */,
@@ -77,6 +99,8 @@
 				ED233D862C1A4B620057B79D /* ContentView.swift */,
 				ED233D882C1A4B640057B79D /* Assets.xcassets */,
 				ED233D8A2C1A4B640057B79D /* Preview Content */,
+				ED2EAA8F2C22211400BF7F24 /* TestScreen.swift */,
+				EDF900662C236D3B001F5FF9 /* GoogleService-Info.plist */,
 			);
 			path = "DSE-Project";
 			sourceTree = "<group>";
@@ -102,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				ED233D9A2C1A946E0057B79D /* RecognitionAttempt.swift */,
+				EDF900642C236995001F5FF9 /* OpenDoorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +159,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		ED2EAA912C22743700BF7F24 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ED2EAA922C22744E00BF7F24 /* HoldDownButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EDF9006D2C237054001F5FF9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EDF9006E2C237060001F5FF9 /* LocalState.swift */,
+				EDC817502C268A01009890FD /* NotificationManager.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +192,10 @@
 			dependencies = (
 			);
 			name = "DSE-Project";
+			packageProductDependencies = (
+				EDF900692C236F0A001F5FF9 /* FirebaseAnalytics */,
+				EDF9006B2C236FB8001F5FF9 /* FirebaseMessaging */,
+			);
 			productName = "DSE-Project";
 			productReference = ED233D812C1A4B620057B79D /* DSE-Project.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +224,9 @@
 				Base,
 			);
 			mainGroup = ED233D782C1A4B620057B79D;
+			packageReferences = (
+				EDF900682C236DEB001F5FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ED233D822C1A4B620057B79D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +243,7 @@
 			files = (
 				ED233D8C2C1A4B640057B79D /* Preview Assets.xcassets in Resources */,
 				ED233D892C1A4B640057B79D /* Assets.xcassets in Resources */,
+				EDF900672C236D3B001F5FF9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,11 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED233D982C1A53650057B79D /* Date+Extension .swift in Sources */,
+				EDF9006F2C237060001F5FF9 /* LocalState.swift in Sources */,
 				ED2EAA8E2C1BFB3F00BF7F24 /* DSEServices.swift in Sources */,
 				ED2EAA892C1BFA7400BF7F24 /* Endpoint.swift in Sources */,
+				ED2EAA902C22211400BF7F24 /* TestScreen.swift in Sources */,
 				ED233D872C1A4B620057B79D /* ContentView.swift in Sources */,
+				EDC817512C268A01009890FD /* NotificationManager.swift in Sources */,
+				ED2EAA932C22744E00BF7F24 /* HoldDownButton.swift in Sources */,
 				ED2EAA8B2C1BFA9800BF7F24 /* DSEEndpoints.swift in Sources */,
 				ED2EAA872C1BFA5E00BF7F24 /* HTTPClient.swift in Sources */,
+				EDF900652C236995001F5FF9 /* OpenDoorResponse.swift in Sources */,
 				ED233D952C1A52EC0057B79D /* Int+Extension.swift in Sources */,
 				ED233D9B2C1A946E0057B79D /* RecognitionAttempt.swift in Sources */,
 				ED233D852C1A4B620057B79D /* DSE_ProjectApp.swift in Sources */,
@@ -345,12 +400,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DSE-Project/DSE-Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSE-Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3945C3P68V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DSE-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -374,12 +431,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DSE-Project/DSE-Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DSE-Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3945C3P68V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DSE-Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,6 +479,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDF900682C236DEB001F5FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDF900692C236F0A001F5FF9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDF900682C236DEB001F5FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EDF9006B2C236FB8001F5FF9 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDF900682C236DEB001F5FF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED233D792C1A4B620057B79D /* Project object */;
 }

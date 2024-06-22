@@ -11,6 +11,7 @@ protocol DSEServiceable {
     
     // Attempt
     func getAllRecognitionAttempts() async -> Result<[RecognitionAttempt], RequestError>
+    func openDoor() async -> Result<OpenDoorResponse, RequestError>
 }
 
 struct DSEServices: HTTPClient, DSEServiceable {
@@ -22,6 +23,10 @@ struct DSEServices: HTTPClient, DSEServiceable {
     
     func getAllRecognitionAttempts() async -> Result<[RecognitionAttempt], RequestError> {
         return await sendRequest(endpoint: DSEEndpoints.getAllRecognitionAttempts, responseModel: [RecognitionAttempt].self)
+    }
+    
+    func openDoor() async -> Result<OpenDoorResponse, RequestError> {
+        return await sendRequest(endpoint: DSEEndpoints.openDoor, responseModel: OpenDoorResponse.self)
     }
 }
 

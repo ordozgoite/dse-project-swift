@@ -9,6 +9,7 @@ import Foundation
 
 enum DSEEndpoints {
     case getAllRecognitionAttempts
+    case openDoor
 }
 
 extension DSEEndpoints: Endpoint {
@@ -19,6 +20,8 @@ extension DSEEndpoints: Endpoint {
         switch self{
         case .getAllRecognitionAttempts:
             return "/api/RecognitionAttempt/GetAllRecognitionAttempts"
+        case .openDoor:
+            return "/api/RecognitionAttempt/OpenDoor"
         }
     }
     
@@ -28,6 +31,8 @@ extension DSEEndpoints: Endpoint {
         switch self {
         case .getAllRecognitionAttempts:
             return .get
+        case .openDoor:
+            return .post
         }
     }
     
@@ -56,7 +61,7 @@ extension DSEEndpoints: Endpoint {
     
     var body: [String : Any]? {
         switch self {
-        case .getAllRecognitionAttempts:
+        case .getAllRecognitionAttempts, .openDoor:
             return nil
         }
     }
